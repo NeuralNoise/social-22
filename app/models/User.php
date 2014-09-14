@@ -10,6 +10,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	use UserTrait, RemindableTrait;
 
 	/**
+	 *  Which fields may be mass assigned
+	 * @var array
+	 */
+	protected $fillable = ['email', 'password'];
+
+	/**
 	 * The database table used by the model.
 	 *
 	 * @var string

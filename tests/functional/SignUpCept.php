@@ -14,3 +14,6 @@ $I->click('Tilmeld');
 
 $I->seeCurrentUrlEquals('');
 $I->see('Velkommen til Socializer');
+$I->seeRecord('users', [
+	'email' => 'christoffer@baadsgaard.net'
+]);
