@@ -24,11 +24,15 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function(){
+	return getenv('APP_ENV') ?: 'local';
+});
 
-	'local' => array('social.dev'),
+//$env = $app->detectEnvironment(array(
 
-));
+//	'local' => array('localhost'),
+
+//));
 
 /*
 |--------------------------------------------------------------------------
