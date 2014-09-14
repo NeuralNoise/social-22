@@ -8,7 +8,8 @@
 			Yet Another Social Network
 		</p>
 		<p>
-			<a href="#" class="btn btn-primary btn-md" role="button">Tilmeld dig</a>
+			
+			{{ link_to_route('register_path', 'Tilmeld dig' , null, array('class' => 'btn btn-md btn-primary')) }}
 		</p>
 	</div>
 
