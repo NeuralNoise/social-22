@@ -17,3 +17,5 @@ $I->see('Velkommen til Socializer');
 $I->seeRecord('users', [
 	'email' => 'christoffer@baadsgaard.net'
 ]);
+
+$I->assertTrue(Auth::check());
